@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Realiza Donación"
+        android:id="@+id/btn_pagar_D"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
+        android:background="@drawable/color_selector"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <NumberPicker
+        android:id="@+id/nump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:layout_above="@+id/btn_pagar_D"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pager"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/nump" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MXN"
+        android:id="@+id/MXN"
+        android:layout_above="@+id/btn_pagar_D"
+        android:layout_toRightOf="@+id/nump"
+        android:layout_toEndOf="@+id/nump"
+        android:layout_below="@+id/pager"
+        android:gravity="center" />
+
+</RelativeLayout>

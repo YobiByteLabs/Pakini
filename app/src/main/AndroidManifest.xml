@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="mx.unam.battlehack.paquini" >
+
+    <uses-sdk tools:node="replace" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".controlador.ActividadIniciaSesion"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name=".controlador.ActivityMain"
+            android:label="@string/title_activity_activity_main" >
+        </activity>
+
+        <activity
+            android:name=".controlador.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".controlador.ActividadIniciaSesion" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mx.unam.battlehack.paquini.controlador.ActividadIniciaSesion" />
+        </activity>
+
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+
+        <activity
+            android:name=".controlador.ActivityComprarCupon"
+            android:label="@string/title_activity_activity_comprar_cupon"
+            android:parentActivityName=".controlador.ActivityMain" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mx.unam.battlehack.paquini.controlador.ActivityMain" />
+        </activity>
+    </application>
+
+</manifest>
